@@ -1,0 +1,21 @@
+<h3 style="margin-left: 550px;">MEDICAL RECORD</h3>
+<div class="container">
+    <div class="jumbotron">
+        <form #emergency="ngForm">
+            <div class="form-group">
+                <label for="location">Location:</label>
+                <input type="text" class="form-control" required name="location" autocapitalize="off" autocorrect="off" [(ngModel)]="medical.location" spellcheck="off"> 
+            </div>
+            <div class="form-group">
+                <label for="accidenttype">Accident Type</label>
+                <input type="text" class="form-control" required name="accidenttype" [(ngModel)]="medical.accidenttype"> 
+            </div>
+            <div class="form-group">
+                <label for="people">No of People Affected:</label>
+                <input type="number" class="form-control" required name="people" [(ngModel)]="medical.people"> 
+            </div>
+            <button  class="btn btn-success" [disabled]="emergency.invalid" (click)="registerCase()">Register Case</button> 
+
+            </form>
+    </div>
+</div>

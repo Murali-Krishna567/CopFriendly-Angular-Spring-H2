@@ -1,0 +1,21 @@
+ <h2 style="margin-left: 550px;">BASIC DETAILS</h2>
+<br><br>
+<div class="jumbotron">Total Amount Collected : <b>{{amt}} Rupees</b></div>
+<button style="margin-left: 200px;"  class="btn btn-info" (click)="fetchAll()">Traffic Violations</button><br><br>
+<table>
+    <tr>
+      <th>Name</th>
+      <th>Vehicle</th>
+      <th>Location</th>
+      <th>Type</th>
+      <th>License No</th>
+    </tr>
+    <tr *ngFor="let acc of dat" >
+      <td >{{acc.name}}</td>
+      <td>{{acc.vehicle}}</td>
+      <td>{{acc.location}}</td>
+      <td>{{acc.type}}</td>
+      <td>{{acc.licenseno}}</td>
+    </tr>
+  </table>
+  

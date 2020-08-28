@@ -1,0 +1,85 @@
+.menu ul li:hover .sub ul
+{
+  display: block;
+  margin: 10px;
+  text-align:center;
+}
+.menu ul li:hover{
+  background-color: red;
+  border-radius: 3px
+}
+.menu ul li:hover .sub ul li
+{
+  width: 150px;
+  padding: 10px;
+  border-bottom: 1px dotted;
+  background: transparent;
+}
+.menu ul li:hover .sub ul li:last-child
+{
+  border-bottom: none;
+}
+.menu ul li:hover .sub ul :hover{
+  color: red;
+}
+.contain
+{
+  position: relative;
+  width: 1200px;
+  height: 300px;
+  margin: 140px auto;
+  margin-top: 50px;
+}
+.contain .box
+{
+  position: relative;
+  width: calc(400px - 30px);
+  height: calc(300px - 30px);
+  float: left;
+  margin: 15px;
+  background: #ff0;
+  box-sizing: border-box;
+  overflow: hidden;
+  border-radius: 12px;
+}
+.contain .box .icon
+{
+  position: absolute;
+  top:0;
+  left:0;
+  width: 100%;
+  height: 100%;
+  transition: 0.5s;
+  background: #f00;
+  z-index: 1;
+}
+.contain .box:hover .icon
+{
+  top:20px;
+  left:calc(50% - 40px);
+  width: 110px;
+  height:110px;
+  opacity: 0.8;
+  border-radius: 50%;
+
+}
+.contain .box .icon .fa
+{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  font-size: 80px;
+  transition: 0.5s;
+  color: #fff;
+}
+.contain .box .con
+{
+  position: absolute;
+  top:120px;
+  height:calc(100% - 100px);
+  padding: 20px;
+  margin-left: 140px;
+  box-sizing: border-box;
+  transition: 0.5s;
+}

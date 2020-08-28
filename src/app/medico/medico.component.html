@@ -1,0 +1,17 @@
+
+<h1 style="margin-left: 550px;">RECORDS</h1><br><br>
+<button style="margin-left:150px;"  class="btn btn-info" (click)="fetchEmer()">Medical Records</button><br><br>
+<!-- <div  class="alert alert-warning" *ngIf="log">Request Sent Successfully....</div> -->
+<table>
+    <tr>
+      <th>Location</th>
+      <th>people Effected</th>
+      <th>Accident Type</th>
+    </tr>
+    <tr *ngFor="let ac of dat" >
+      <td >{{ac.location}}</td>
+      <td>{{ac.people}}</td>
+      <td>{{ac.accidenttype}}</td>
+      <!-- <td><button class="btn btn-warning" (click)="gososo()">Send</button></td> -->
+    </tr>
+  </table>

@@ -1,0 +1,46 @@
+ <html>
+<head>
+</head>
+<body>
+  <h1 style="margin-left: 550px;">PAYMENT</h1>
+  <div  *ngIf='flag' style="margin-left: 400px;">Transaction Sucessful. Your Transaction id: <b>{{TRS}}...    </b>
+      <a href="/payment">Another Payment</a></div>
+    <div class="container">
+        <div class="jumbotron">
+            <form #chalan="ngForm">
+                <div class="form-group">
+                    <label for="vehicleno"></label>
+                     <input type="text" class="form-control" required name="vehicleno" [(ngModel)]="vehicleno" placeholder="Enter Vehicle No">
+                </div>
+                <div class="form-group">
+                  <label for="phoneno"></label>
+                  <input type="text" class="form-control" required name="phoneno" [(ngModel)]="phoneno" placeholder="Enter phoneno No"><br><br>
+              </div>
+              <button class="btn btn-success"  [disabled]="chalan.invalid" (click)="fetchChallans()" >My Challans</button>
+            </form>
+            <br>
+        </div>
+    </div>
+ 
+
+<table >
+  <tr>
+    <th>Name</th>
+    <th>Vehicle</th>
+    <th>Location</th>
+    <th>Type</th>
+    <th>License No</th>
+    <th>Payment</th>
+  </tr>
+  <tr *ngFor="let acc of data" >
+    <td >{{acc.name}}</td>
+    <td>{{acc.vehicle}}</td>
+    <td>{{acc.location}}</td>
+    <td>{{acc.type}}</td>
+    <td>{{acc.licenseno}}</td>
+    <td><button class="btn btn-info" (click)="initPay()">Pay</button></td>
+  </tr>
+</table>
+ 
+</body>
+</html>

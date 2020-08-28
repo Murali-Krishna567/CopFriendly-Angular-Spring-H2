@@ -1,0 +1,40 @@
+<!-- <h1 style="margin-left: 550px;">Need Help?</h1>
+<div class="alert alert-warning" *ngIf='log'>{{msg}}</div>
+<agm-map style="width: 700px;" [latitude]="lat" [longitude]="lng">
+<agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+ </agm-map>
+ <h4 style="margin-top: 10px;">Step 1:</h4>
+<label  for="type"></label>
+<label></label>
+<input type="text"  style="width: 400px; margin-left: 800px; margin-top: -300px;" class="form-control" name="type" required [(ngModel)]="type" placeholder= "Type of Isuue(fire accident etc..)">
+           
+         
+
+<h3 style="margin-left: 800px; margin-top: 10px;">Step 2:</h3>
+<button style="margin-left: 920px;margin-top: 10px; margin-bottom: 10px;width: 200px;" class="btn btn-success" (click)="getloc()">get my location</button>
+<button style="margin-left: 480px;" class="btn btn-warning"  (click)="gosos()" ><h4>NEED BACKUP</h4></button>
+ 
+<div class="alert alert-warning" *ngIf="log">Request Sent Sucessfully.....Medical Team will reach u soon!!</div>
+ -->
+
+ <h1 style="margin-left: 500px;">NEED HELP ?</h1>
+ <div class="alert alert-warning" *ngIf="log">Request Sent Sucessfully.....Team will reach u soon!!</div>
+ <agm-map style="width: 700px;" [latitude]="lat" [longitude]="lng">
+   <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+ </agm-map>
+ <div class="container">
+    <div class="jumbotron">
+    <form>
+    <h3 style="margin-left: 800px; margin-top: -300px;">Step 1:</h3>
+    <div class="form-group">
+        <label for="type"></label>
+        <input style="width:200px; margin-left: 920px;margin-bottom: 20px; margin-top: -60px;" type="text" class="form-control" required name="type" [(ngModel)]="type" placeholder="Type of Issue"> 
+    </div>
+    <h3 style="margin-left: 800px; margin-top: 10px;">Step 2:</h3>
+    <button style="margin-left: 920px;margin-top: -70px; margin-bottom: 10px; width: 200px;" class="btn btn-success" (click)="getloc()">get my location</button>
+    <h3 style="margin-left: 800px; margin-top: 10px;">Step 3:</h3>
+    <button style="margin-left: 920px;margin-top: -70px; margin-bottom: 10px; width: 200px;" class="btn btn-warning" (click)="sendsms()">NEED BACKUP</button>
+    <!-- <input type="text" style="margin-left: 920px;margin-top: -70px; margin-bottom: 10px;" > -->
+</form>
+</div>
+</div>

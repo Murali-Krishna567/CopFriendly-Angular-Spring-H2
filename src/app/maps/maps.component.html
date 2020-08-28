@@ -1,0 +1,10 @@
+
+<h1 style="margin-left: 500px;">EMERGENCY</h1>
+<div class="alert alert-warning" *ngIf="log">Request Sent Sucessfully.....Medical Team will reach u soon!!</div>
+<agm-map style="width: 700px;" [latitude]="lat" [longitude]="lng">
+  <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+</agm-map>
+<h3 style="margin-left: 800px; margin-top: -300px;">Step 1:</h3>
+<button style="margin-left: 920px;margin-top: -70px; margin-bottom: 10px;width: 200px;" class="btn btn-success" (click)="getloc()">get my location</button>
+<h3 style="margin-left: 800px; margin-top: 10px;">Step 2:</h3>
+<button style="margin-left: 920px;margin-top: -70px; margin-bottom: 10px;" class="btn btn-warning" (click)="sendsms()">Request Medical Services</button>
